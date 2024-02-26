@@ -9,16 +9,12 @@ function addTask(){
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
-        newListItem.oneclick = removeListItem;
-        newListItem.classList.add('show');
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
     }
     inputBox.value = "";
     saveData();
-}
-
-function removeListItem(e){
-    e.target.classList.remove('show');
-
 }
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
@@ -36,4 +32,3 @@ function saveData(){
 function showTask(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
-showTask();
