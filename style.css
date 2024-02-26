@@ -1,29 +1,99 @@
 *{
+
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: "Rubik", sans-serif;
     box-sizing: border-box;
-}
-.container{
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #1100ff, #ff5858);
-    padding: 10px;
+    color:#ffffff;
+    font-size: 25px;
+    left: 10px
 }
 .to-do-list{
     width: 100%;
-    max-width: 520px;
-    background: white;
-    margin: 100px auto 20px;
-    padding: 40px 20px 70px;
-    border-radius: 10px;
+    max-width: 100%;
+    background: rgb(0, 0, 0);
+    padding: 70px 20px 750px;
 }
 img{
-    width: 80px;
-    height: auto;
-    margin-left: 15px;
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    transform: translateY(-15px);
+    align-items: center;
 }
-h2{
+body p{
+    transform: translateY(175px);
+    margin-left: 760px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    border-radius: 30px;
+    padding-left: 20px
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #0073ff;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 100px 10px 60px;
+    user-select: none;
+    cursor: pointer;
     position: relative;
-    bottom: 100px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+}
+ul li.checked::before{
+    background-image: url(images/check-icon.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateX(1550px);
+}
+ul li span:hover{
+    background: #f0f0f0;
+}
+input[type="text"]::-webkit-input-placeholder {
+    color:#0073ff;
 }
