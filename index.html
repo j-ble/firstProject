@@ -14,7 +14,15 @@
             <div class="row">
                 <button onclick="addTask()">+</button>
                 <input type="text" id="input-box" placeholder="New Reminder">
+                <!-- Adding a label for clarity -->
+                <label for="priority-selector">Priority:</label>
+                <select id="priority-selector">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
             </div>
+            <ul id="list-container"></ul>          
             <ul id="list-container">
                 <!--<li class="checked">Task 1</li>
                 <li>Task 2</li>
