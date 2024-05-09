@@ -97,3 +97,90 @@ ul li span:hover{
 input[type="text"]::-webkit-input-placeholder {
     color:#0073ff;
 }
+input[type="text"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #000000;  /* Slightly lighter shade for input fields */
+    color: white;  /* Text color */
+    outline: none;  /* No outline on focus */
+}
+.low {
+    border-left: 10px solid green;
+}
+
+.medium {
+    border-left: 10px solid orange;
+}
+
+.high {
+    border-left: 10px solid red;
+}
+
+li {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    cursor: pointer;
+    color: red;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;  /* Dark theme background */
+    color: #ffffff;  /* White text color */
+    font-family: 'Rubik', sans-serif;  /* Consistent font usage */
+}
+.container {
+    position: absolute;  /* Absolute positioning for precise placement */
+    top: 20px;  /* 20px from the top of the viewport */
+    left: 20px;  /* 20px from the left of the viewport */
+    padding: 20px;
+    background-color: #000000;  /* Dark theme for the container */
+    border-radius: 10px;
+    width: auto;  /* Auto width based on content */
+    max-width: 600px;  /* Maximum width to keep the layout tidy */
+}
+.row {
+    display: flex;
+    align-items: center;  /* Align items vertically in the center */
+    gap: 10px;  /* Space between elements in the row */
+}
+.to-do-list {
+    width: 100%; /* Adjusts width to use maximum available space */
+    max-width: 600px; /* Ensures the to-do list doesn't get too wide on larger screens */
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label {
+    color: white;  /* Ensure the label is clearly visible */
+}
+select#priority-selector {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #555; /* Slightly lighter shade for priority selector */
+    color: white;
+    outline: none; /* No outline on focus */
+}
