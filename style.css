@@ -129,6 +129,7 @@ li {
 }
 
 .close {
+    float: right;
     cursor: pointer;
     color: red;
 }
@@ -180,7 +181,53 @@ select#priority-selector {
     padding: 10px;
     border-radius: 5px;
     border: none;
-    background-color: #555; /* Slightly lighter shade for priority selector */
+    border: 2px solid #fff;
+    background-color: #000000; /* Slightly lighter shade for priority selector */
     color: white;
     outline: none; /* No outline on focus */
+}
+select#category-selector {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid #fff;
+    background-color: #000000; /* Slightly lighter shade for priority selector */
+    color: white;
+    outline: none; /* No outline on focus */
+}
+li[data-category="work"] {
+    background-color: #ffdddd;
+}
+
+li[data-category="personal"] {
+    background-color: #ddffdd;
+}
+
+li[data-category="shopping"] {
+    background-color: #dddfff;
+}
+
+li[data-category="other"] {
+    background-color: #ffffdd;
+}
+.category-container {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #000000; /* Light grey background for container */
+    border-radius: 8px;
+}
+input[type="date"] {
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#due-date-selector {
+    padding: 8px;
+    margin-right: 10px; /* Consistent spacing to the right */
+    border: 2px solid #ccc; /* Light grey border for a subtle look */
+    background-color: #000000; /* White background to maintain consistency */
+    border-radius: 4px; /* Rounded corners for a modern feel */
+    font-size: 16px; /* Adequate font size for easy readability */
+    outline: none; /* Removes the default focus outline */
 }

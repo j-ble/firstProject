@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1"
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
 <title></title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,6 +15,15 @@
             <div class="row">
                 <button onclick="addTask()">+</button>
                 <input type="text" id="input-box" placeholder="New Reminder">
+                <!-- Category Selector -->
+                <label for="category-selector">Category:</label>
+                <select id="category-selector">
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="other">Other</option>
+                </select>
+        
                 <!-- Adding a label for clarity -->
                 <label for="priority-selector">Priority:</label>
                 <select id="priority-selector">
@@ -21,13 +31,33 @@
                     <option value="medium">Medium Priority</option>
                     <option value="high">High Priority</option>
                 </select>
+        <!-- Due Date Selector -->
+        <label for="due-date-selector">Due Date:</label>
+        <input type="date" id="due-date-selector">
+            </div>
+            <!-- Category sections initialized as hidden -->
+            <div class="category-container" id="work-container" style="display: none;">
+                <h3>Work</h3>
+                <ul></ul>
+            </div>
+            <div class="category-container" id="personal-container" style="display: none;">
+                <h3>Personal</h3>
+                <ul></ul>
+            </div>
+            <div class="category-container" id="shopping-container" style="display: none;">
+                <h3>Shopping</h3>
+                <ul></ul>
+            </div>
+            <div class="category-container" id="other-container" style="display: none;">
+                <h3>Other</h3>
+                <ul></ul>
             </div>
             <ul id="list-container"></ul>          
             <ul id="list-container">
                 <!--<li class="checked">Task 1</li>
                 <li>Task 2</li>
                 <li>Task 3</li>-->
-            </ul>
+            </ul>    
         </div>
     </div>
 <script src="script.js"></script>
